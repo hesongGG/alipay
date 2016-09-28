@@ -194,7 +194,7 @@ module Alipay
       request_uri(params, options).to_s
     end
 
-    CREATE_FOREX_TRADE_WAP_REQUIRED_PARAMS = %w( out_trade_no subject merchant_url currency total_fee  )
+    CREATE_FOREX_TRADE_WAP_REQUIRED_PARAMS = %w( out_trade_no subject merchant_url currency )
     def self.create_forex_trade_wap_url(params, options = {})
       params = Utils.stringify_keys(params)
       check_required_params(params, CREATE_FOREX_TRADE_WAP_REQUIRED_PARAMS)
