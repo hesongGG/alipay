@@ -202,7 +202,8 @@ module Alipay
       params = {
         'service'        => 'create_forex_trade_wap',
         '_input_charset' => 'utf-8',
-        'partner'        => options[:pid] || Alipay.pid
+        'partner'        => options[:pid] || Alipay.pid,
+        'seller_id'      => options[:pid] || Alipay.pid
       }.merge(params)
 
       request_uri(params, options).to_s
